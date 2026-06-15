@@ -1,0 +1,398 @@
+<html>
+
+<head>
+    <title>NexusFlow</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial;
+        }
+
+        body {
+            background: #0a1a2f;
+            color: #e6f0ff;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            background: #0f2a4a;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #4da3ff;
+        }
+
+        .logo span {
+            color: white;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #e6f0ff;
+        }
+
+        nav ul li a:hover {
+            color: #4da3ff;
+        }
+
+
+        .btn {
+            padding: 10px 15px;
+            background: #1e90ff;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #0d6efd;
+            transform: scale(1.05);
+        }
+
+
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: radial-gradient(circle, #1b3b6f, #0a1a2f);
+        }
+
+        .hero h1 {
+            font-size: 60px;
+        }
+
+        .hero h1 span {
+            color: #4da3ff;
+        }
+
+        .hero p {
+            margin-top: 15px;
+            color: #cfe3ff;
+        }
+
+        .hero button {
+            margin-top: 20px;
+            padding: 12px 20px;
+            margin: 10px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .one{
+            background: #1e90ff;
+            color: white;
+        }
+
+        .one:hover {
+            background: #0d6efd;
+            transform: scale(1.05);
+        }
+
+        .two {
+            background: transparent;
+            border: 2px solid #4da3ff;
+            color: #4da3ff;
+        }
+
+        .two:hover {
+            background: #4da3ff;
+            color: #0a1a2f;
+            transform: scale(1.05);
+        }
+
+        .core {
+            text-align: center;
+            padding: 60px 40px;
+        }
+
+        .core p {
+            color: #cfe3ff;
+            margin-bottom: 40px;
+        }
+
+        .core-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .card {
+            width: 280px;
+            background: #132742;
+            padding: 20px;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            background: #1a3558;
+        }
+
+        .card h3 {
+            margin: 10px 0;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: #cfe3ff;
+        }
+
+        .pricing {
+            text-align: center;
+            padding: 60px 40px;
+        }
+
+        .pricing-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .price-card {
+            width: 280px;
+            background: #132742;
+            padding: 25px;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        .price-card:hover {
+            transform: scale(1.03);
+        }
+
+        .price-card h1 {
+            color: #4da3ff;
+        }
+
+        .price-card ul {
+            list-style: none;
+            margin-top: 10px;
+            text-align: left;
+        }
+
+        .price-card ul li {
+            margin: 6px 0;
+            color: #cfe3ff;
+        }
+
+                
+
+        .badge {
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #1e90ff;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+        }
+
+        .contact {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 350px;
+            margin: auto;
+            gap: 15px;
+        }
+
+        input,
+        textarea {
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            outline: none;
+            background: #132742;
+            color: white;
+        }
+
+        button {
+            padding: 12px;
+            background: #1e90ff;
+            border: none;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #0d6efd;
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #0f2a4a;
+            color: #cfe3ff;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+
+
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .hero {
+                padding: 50px 20px;}
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .core-container,
+            .pricing-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            form {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">Nexus<span>Flow</span></div>
+
+        <ul>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Stats</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+        <button class="btn">Access Terminal</button>
+    </nav>
+    <section class="hero">
+        <h1>NEXUS <span>FLOW</span></h1>
+        <p>The quantum leap in team collaboration. Connect minds, sync realities, achieve impossible.</p>
+
+        <button class="one">Initialize System</button>
+        <button class="two">View Documentation</button>
+    </section>
+    <section class="core">
+        <h2>CORE SYSTEMS</h2>
+        <p>Advanced modules designed for maximum efficiency and seamless integration</p>
+
+        <div class="core-container">
+
+            <div class="card">
+                <h3>Quantum Processing</h3>
+                <p>Fast intelligent processing system.</p>
+            </div>
+
+            <div class="card">
+                <h3>Neural Networks</h3>
+                <p>AI-powered learning system.</p>
+            </div>
+
+            <div class="card">
+                <h3>Holographic Interface</h3>
+                <p>3D immersive workspace.</p>
+            </div>
+
+            <div class="card">
+                <h3>Encryption Core</h3>
+                <p>Military-grade security system.</p>
+            </div>
+
+            <div class="card">
+                <h3>Hyper Sync</h3>
+                <p>Instant cross-device sync.</p>
+            </div>
+
+            <div class="card">
+                <h3>AI Analytics</h3>
+                <p>Smart prediction engine.</p>
+            </div>
+
+        </div>
+    </section>
+    <section class="pricing">
+        <h2>ACCESS LEVELS</h2>
+
+        <div class="pricing-container">
+
+            <div class="price-card">
+                <h3>Initiate</h3>
+                <h1>$49</h1>
+                <ul>
+                    <li>Basic access</li>
+                    <li>5 workspaces</li>
+                    <li>Standard support</li>
+                </ul>
+            </div>
+
+            <div class="price-card">
+                <div class="badge">Most Popular</div>
+                <h3>Nexus</h3>
+                <h1>$149</h1>
+                <ul>
+                    <li>Advanced AI tools</li>
+                    <li>Unlimited workspace</li>
+                    <li>Priority support</li>
+                </ul>
+            </div>
+
+            <div class="price-card">
+                <h3>Transcend</h3>
+                <h1>$399</h1>
+                <ul>
+                    <li>Full system access</li>
+                    <li>Quantum AI engine</li>
+                    <li>Neural interface</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+    <section class="contact">
+
+        <h2>INITIALIZE CONTACT</h2>
+
+        <form>
+            <input type="text" placeholder="Enter Your Mail">
+            <input type="text" placeholder="Address">
+            <textarea placeholder="Message"></textarea>
+            <button type="submit">Transmit</button>
+        </form>
+
+    </section>
+    <footer>
+        © 2025 NexusFlow Systems. All rights reserved.
+    </footer>
+
+</body>
+
+</html>
